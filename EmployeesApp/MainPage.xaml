@@ -10,5 +10,26 @@
 
     <Grid>
 
+        <GridView Name ="Employees" ItemsSource="{Binding}" Height="300" Width="400" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Employee">
+                    <StackPanel Orientation="Horizontal" Margin="2">
+                        <TextBlock Text="{x:Bind Name}" Width="100"/>
+                        <TextBlock Text="{x:Bind Title}" Width="100"/>
+
+                    </StackPanel>
+                    
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            
+            
+        </GridView>
+        <Button Content="Add Employee" Click="Button_Click" HorizontalAlignment="Left" Margin="58,103,0,0" VerticalAlignment="Top"/>
+     
+        
+        
+        
     </Grid>
+
+
 </Page>
